@@ -1,4 +1,4 @@
-import lib.feed_class as feed
+import libCore.feed_class as feed
 
 feed_ = feed.feed()
 

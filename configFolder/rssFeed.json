@@ -10,5 +10,11 @@
     {"name_organization" : "elpais",
      "rss_link" : "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada",
      "language" : "es"
-    }
+    },
+    {"name_organization" : "leparisien",
+     "rss_link" : "https://feeds.leparisien.fr/leparisien/rss/international",
+     "language" : "fr"},
+     {"name_organization" : "new-york times",
+      "rss_link" :  "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "language" : "en"}
 ]
