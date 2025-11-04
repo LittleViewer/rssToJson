@@ -28,6 +28,3 @@ class util :
         else: 
              dict_orderized[organiser_element] = [items_add_dict]
         return dict_orderized
-
-        
-        
