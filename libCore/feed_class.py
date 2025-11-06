@@ -1,5 +1,6 @@
 import json
 import libCore.utils_class as utils
+import libCore.json_class as json_class
 import feedparser
 
 class feed:
@@ -36,15 +37,16 @@ class feed:
             formated_feed_list[one_key] = []
             one_feed = parsed_feed_list[one_key]
             for one_article in one_feed[0].entries :
-                formated_feed_list[one_key].append([one_article.title, one_article.description, one_article.published, one_article.link])
-        
+                formated_feed_list[one_key].append([one_article.title, one_article.description, one_article.published, one_article.link])  
         return formated_feed_list
     
     def pipe_extract_rss(self, link = "configFolder\\rssFeed.json"):
         dict_feed = self.extract_feed_link(link)
         parsed_feed_list = self.parse_rss(dict_feed)
-        print(self.formated_result(parsed_feed_list))
+        formated_feed = self.formated_result(parsed_feed_list)
+        print(self.json_.pipe_output(formated_feed))
 
 
     def __init__(self):
-         self.utils_ = utils.util()
+         self.utils_ = utils.utils()
+         self.json_ = json_class.jsons_utils()

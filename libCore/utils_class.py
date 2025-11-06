@@ -1,8 +1,9 @@
 import pathlib
 import sys
+import datetime
 
 
-class util :
+class utils :
 
     def check_file_exist(self, link):
         handle = pathlib.Path(link)
@@ -28,3 +29,12 @@ class util :
         else: 
              dict_orderized[organiser_element] = [items_add_dict]
         return dict_orderized
+    
+    def string_formated_name_file(self, string, unformated_sign = [".", ",",",","'",";", "?", "!",":","-", " ", "/"]):
+        string_formated = ""
+        for one_sign in string:
+            if one_sign in unformated_sign:
+                string_formated = string_formated + "_"
+            else:
+                string_formated = string_formated + one_sign
+        return string_formated
