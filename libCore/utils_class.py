@@ -1,6 +1,6 @@
 import pathlib
 import sys
-import datetime
+import os
 
 
 class utils :
@@ -17,6 +17,11 @@ class utils :
     def file_open(self, link, mode = "r"):
         handle = open(link, mode)
         return handle
+    
+    def create_dir(self, link, would_create = True) :
+        if would_create == True:
+            os.mkdir(link)
+        return True
     
     def order_dict(self, items_add_dict, organiser_element, dict_orderized, tick ):
         if tick == 0 :

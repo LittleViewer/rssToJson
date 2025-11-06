@@ -181,4 +181,5 @@ cython_debug/
 .cursorindexingignore
 
 
-output/
+output/*
+!output/.gitkeep

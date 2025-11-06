@@ -44,7 +44,7 @@ class feed:
         dict_feed = self.extract_feed_link(link)
         parsed_feed_list = self.parse_rss(dict_feed)
         formated_feed = self.formated_result(parsed_feed_list)
-        print(self.json_.pipe_output(formated_feed))
+        self.json_.pipe_output(formated_feed)
 
 
     def __init__(self):
