@@ -29,14 +29,14 @@ class jsons_utils:
         tick = 0
         for one_key in worked_json[0]:
             worked_json[0][one_key] = str(article_pre_json[tick])
-            tick =+ 1
+            tick += 1
         return worked_json
 
     def dump_json(self, json_to_dump, title_formated_file, language):
         check_handle = self.check_handle_exist(f"output/{self.day_dir_title}/{language}/{title_formated_file}.json", f"This json: {title_formated_file}.json already exist!", False)
         if check_handle == True:
             handle = self.utils_.file_open(f"output/{self.day_dir_title}/{language}/{title_formated_file}.json", "w+")
-            json.dump(json_to_dump, handle)
+            json.dump(json_to_dump, handle, indent = 4, ensure_ascii=False)
 
     def pipe_output (self, feed_formated):
         model_json = self.copy_model_json()

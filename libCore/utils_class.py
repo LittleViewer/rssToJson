@@ -14,8 +14,8 @@ class utils :
         if to_break == True:
             sys.exit(code)
 
-    def file_open(self, link, mode = "r"):
-        handle = open(link, mode)
+    def file_open(self, link, mode = "r", encoding_would="utf-8"):
+        handle = open(link, mode, encoding=encoding_would)
         return handle
     
     def create_dir(self, link, would_create = True) :
