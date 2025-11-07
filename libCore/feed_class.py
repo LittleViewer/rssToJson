@@ -40,7 +40,7 @@ class feed:
                 formated_feed_list[one_key].append([one_article.title, one_article.description, one_article.published, one_article.link])  
         return formated_feed_list
     
-    def pipe_extract_rss(self, link = "configFolder\\rssFeed.json"):
+    def pipe_extract_rss(self, link = "configFolder/rssFeed.json"):
         dict_feed = self.extract_feed_link(link)
         parsed_feed_list = self.parse_rss(dict_feed)
         formated_feed = self.formated_result(parsed_feed_list)
