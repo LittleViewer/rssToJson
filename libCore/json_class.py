@@ -36,6 +36,7 @@ class jsons_utils:
         check_handle = self.check_handle_exist(self.utils_.absolute_link(f"output/{self.day_dir_title}/{language}/{title_formated_file}.json"), f"This json: {title_formated_file}.json already exist!", False)
         if check_handle == True:
             handle = self.utils_.file_open(self.utils_.absolute_link(f"output/{self.day_dir_title}/{language}/{title_formated_file}.json"), "w+")
+            self.count_number_article += 1
             json.dump(json_to_dump, handle, indent = 4, ensure_ascii=False)
 
     def pipe_output (self, feed_formated):
@@ -48,8 +49,10 @@ class jsons_utils:
                 good_for_dump = self.generate_json(one_article, model_json)
                 title_formated_file = self.utils_.string_formated_name_file(one_article[0])
                 self.dump_json(good_for_dump, title_formated_file, one_key)
+        return self.count_number_article
     
     def __init__(self):
+        self.count_number_article = 0
         self.utils_ = utils.utils()
         self.date = datetime.datetime.now()
         self.day_dir_title = self.utils_.string_formated_name_file(str(self.date.year)+ " "+ str(self.date.month) + " " + str(self. date.day))

@@ -1,6 +1,8 @@
 import pathlib
 import sys
 import os
+import datetime
+
 
 
 class utils :
@@ -10,7 +12,7 @@ class utils :
         return handle.exists()
     
     def error_with_reason(self, reason, to_break = False, code = 1000):
-        print("Stop Reason: " + reason)
+        print(f"[{self.date_}] - Stop Reason: " + reason)
         if to_break == True:
             sys.exit(code)
 
@@ -46,3 +48,6 @@ class utils :
     
     def absolute_link(self, link):
             return os.path.join(os.getcwd(), link)
+    
+    def __init__(self):
+        self.date_ = datetime.datetime.now()
