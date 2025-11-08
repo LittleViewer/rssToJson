@@ -1,5 +1,4 @@
 import json
-import os
 import libCore.utils_class as utils
 import libCore.json_class as json_class
 import feedparser
@@ -42,7 +41,7 @@ class feed:
         return formated_feed_list
     
     def pipe_extract_rss(self, link = "configFolder/rssFeed.json"):
-        dict_feed = self.extract_feed_link(os.path.join(os.getcwd(), link))
+        dict_feed = self.extract_feed_link(self.utils_.absolute_link(link))
         parsed_feed_list = self.parse_rss(dict_feed)
         formated_feed = self.formated_result(parsed_feed_list)
         self.json_.pipe_output(formated_feed)

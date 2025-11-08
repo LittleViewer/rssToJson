@@ -43,3 +43,6 @@ class utils :
             else:
                 string_formated = string_formated + one_sign
         return string_formated
+    
+    def absolute_link(self, link):
+            return os.path.join(os.getcwd(), link)

@@ -1,5 +1,4 @@
 import json
-import os
 import datetime
 import libCore.utils_class as utils
 
@@ -13,17 +12,17 @@ class jsons_utils:
             return True
 
     def manage_day_dir(self):
-        self.check_handle_exist(os.path.join(os.getcwd(),"output/"), "Output dir not exist! (please create 'RSSTOJSON/output/')")
-        check_handle = self.check_handle_exist(os.path.join(os.getcwd(), f"output/{self.day_dir_title}/"), "Output dir for day not exist!", False)
-        self.utils_.create_dir(os.path.join(os.getcwd(),f"output/{self.day_dir_title}/"), check_handle)
+        self.check_handle_exist(self.utils_.absolute_link("output/"), "Output dir not exist! (please create 'RSSTOJSON/output/')")
+        check_handle = self.check_handle_exist(self.utils_.absolute_link(f"output/{self.day_dir_title}/"), "Output dir for day not exist!", False)
+        self.utils_.create_dir(self.utils_.absolute_link(f"output/{self.day_dir_title}/"), check_handle)
 
     def manage_language_sub_dir(self, language):
-        check_handle = self.check_handle_exist(os.path.join(os.getcwd(),f"output/{self.day_dir_title}/{language}"), "Output dir by language for day not exist!", False)
-        self.utils_.create_dir(os.path.join(os.getcwd(),f"output/{self.day_dir_title}/{language}"), check_handle)
+        check_handle = self.check_handle_exist(self.utils_.absolute_link(f"output/{self.day_dir_title}/{language}"), "Output dir by language for day not exist!", False)
+        self.utils_.create_dir(self.utils_.absolute_link(f"output/{self.day_dir_title}/{language}"), check_handle)
 
     def copy_model_json(self):
-        self.check_handle_exist(os.path.join(os.getcwd(),"configFolder/modelOutput.json"), "Model output json file not exist!")
-        handle_open = self.utils_.file_open(os.path.join(os.getcwd(),"configFolder/modelOutput.json"))
+        self.check_handle_exist(self.utils_.absolute_link("configFolder/modelOutput.json"), "Model output json file not exist!")
+        handle_open = self.utils_.file_open(self.utils_.absolute_link("configFolder/modelOutput.json"))
         return json.load(handle_open)
 
     def generate_json(self, article_pre_json, worked_json):
@@ -34,9 +33,9 @@ class jsons_utils:
         return worked_json
 
     def dump_json(self, json_to_dump, title_formated_file, language):
-        check_handle = self.check_handle_exist(os.path.join(os.getcwd(),f"output/{self.day_dir_title}/{language}/{title_formated_file}.json"), f"This json: {title_formated_file}.json already exist!", False)
+        check_handle = self.check_handle_exist(self.utils_.absolute_link(f"output/{self.day_dir_title}/{language}/{title_formated_file}.json"), f"This json: {title_formated_file}.json already exist!", False)
         if check_handle == True:
-            handle = self.utils_.file_open(os.path.join(os.getcwd(),f"output/{self.day_dir_title}/{language}/{title_formated_file}.json"), "w+")
+            handle = self.utils_.file_open(self.utils_.absolute_link(f"output/{self.day_dir_title}/{language}/{title_formated_file}.json"), "w+")
             json.dump(json_to_dump, handle, indent = 4, ensure_ascii=False)
 
     def pipe_output (self, feed_formated):
