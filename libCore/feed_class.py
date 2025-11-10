@@ -33,11 +33,13 @@ class feed:
     def formated_result(self, parsed_feed_list):
         index_list = list(parsed_feed_list.keys())
         formated_feed_list = {}
+        tick = 0
         for one_key in index_list:
             formated_feed_list[one_key] = []
             one_feed = parsed_feed_list[one_key]
-            for one_article in one_feed[0].entries :
+            for one_article in one_feed[(tick-1)].entries :
                 formated_feed_list[one_key].append([one_article.title, one_article.description, one_article.published, one_article.link])  
+            tick += 1
         return formated_feed_list
     
     def pipe_extract_rss(self, link = "configFolder/rssFeed.json"):
