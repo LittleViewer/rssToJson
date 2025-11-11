@@ -1,20 +1,29 @@
 [
-    {"name_organization" : "english_feed",
-     "rss_link" : "english_feed/rss.xml",
+    {"name_organization" : "LaVoixDuNord",
+      "rss_link" :  "https://www.lavoixdunord.fr/rss2/610477/cible_principale",
+      "language" : "fr"},
+    {"name_organization" : "Politco",
+     "rss_link" : "https://rss.politico.com/defense.xml",
+     "language" : "en"},
+    {"name_organization" : "onu",
+      "rss_link" :  "https://www.ungeneva.org/en/news-media/press-items-list/rss.xml",
+      "language" : "en"},
+    {"name_organization" : "bbc",
+     "rss_link" : "https://feeds.bbci.co.uk/news/world/rss.xml",
      "language" : "en"
     },
-    {"name_organization" : "france_feed",
-     "rss_link" : "https://france_feed.xml",
+    {"name_organization" : "lemonde",
+     "rss_link" : "https://www.lemonde.fr/rss/en_continu.xml",
      "language" : "fr"
     },
-    {"name_organization" : "spain_feed",
-     "rss_link" : "https://spain_feed",
+    {"name_organization" : "elpais",
+     "rss_link" : "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada",
      "language" : "es"
     },
-    {"name_organization" : "france_feed",
-     "rss_link" : "https://france_feed.xml",
+    {"name_organization" : "leparisien",
+     "rss_link" : "https://feeds.leparisien.fr/leparisien/rss/international",
      "language" : "fr"},
-     {"name_organization" : "english_feed",
-      "rss_link" :  "https://english_feed.xml",
+     {"name_organization" : "new-york times",
+      "rss_link" :  "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "language" : "en"}
-]
+  ]

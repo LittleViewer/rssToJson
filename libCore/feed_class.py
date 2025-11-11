@@ -23,9 +23,12 @@ class feed:
     def parse_rss(self, dict_feed):
         parsed_feed_list = {}
         list_key = list(dict_feed.keys())
+        tick_feed = 0
         for one_key in list_key:
             parsed_feed_list[one_key] = []
             for one_feed in dict_feed[one_key]:
+                tick_feed += 1
+                print(f"Read: {one_feed} #{tick_feed}")
                 parsed_feed_list[one_key].append(feedparser.parse(one_feed))
         return parsed_feed_list
                 
@@ -37,7 +40,7 @@ class feed:
         for one_key in index_list:
             formated_feed_list[one_key] = []
             one_feed = parsed_feed_list[one_key]
-            for one_article in one_feed[(tick-1)].entries :
+            for one_article in one_feed[0].entries :
                 formated_feed_list[one_key].append([one_article.title, one_article.description, one_article.published, one_article.link])  
             tick += 1
         return formated_feed_list
