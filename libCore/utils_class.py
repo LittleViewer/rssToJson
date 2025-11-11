@@ -37,7 +37,7 @@ class utils :
              dict_orderized[organiser_element] = [items_add_dict]
         return dict_orderized
     
-    def string_formated_name_file(self, string, unformated_sign = [".", ",",",","'",";", "?", "!",":","-", " ", "/"]):
+    def string_formated_name_file(self, string, unformated_sign = [".", ",",",","'",";", "?", "!",":","-", " ", "/","<",">",":",'"',"/","\\","|","?","*"]):
         string_formated = ""
         for one_sign in string:
             if one_sign in unformated_sign:

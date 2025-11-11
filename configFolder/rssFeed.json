@@ -1,29 +1,44 @@
 [
     {"name_organization" : "LaVoixDuNord",
       "rss_link" :  "https://www.lavoixdunord.fr/rss2/610477/cible_principale",
-      "language" : "fr"},
+      "country" : "fr"},
+    {"name_organization" : "CorriereDellaSera",
+     "rss_link" : "https://www.corriere.it/dynamic-feed/rss/section/Esteri.xml",
+     "country" : "it"},
+     {"name_organization" : "La Reppublica",
+     "rss_link" : "https://www.repubblica.it/rss/esteri/rss2.0.xml",
+     "country" : "it"},
     {"name_organization" : "Politco",
      "rss_link" : "https://rss.politico.com/defense.xml",
-     "language" : "en"},
+     "country" : "en"},
+     {"name_organization" : "LeFigaro",
+      "rss_link" :  "https://www.lavoixdunord.fr/rss2/610477/cible_principale",
+      "country" : "fr"},
+     {"name_organization" : "Politco",
+     "rss_link" : "https://rss.politico.com/economy.xml",
+     "country" : "en"},
+     {"name_organization" : "JerusalemPost",
+      "rss_link" : "https://www.jpost.com/rss/rssfeedsarabisraeliconflict.aspx",
+      "country" : "il"},
     {"name_organization" : "onu",
       "rss_link" :  "https://www.ungeneva.org/en/news-media/press-items-list/rss.xml",
-      "language" : "en"},
+      "country" : "en"},
     {"name_organization" : "bbc",
      "rss_link" : "https://feeds.bbci.co.uk/news/world/rss.xml",
-     "language" : "en"
+     "country" : "en"
     },
-    {"name_organization" : "lemonde",
+    {"name_organization" : "LeMonde",
      "rss_link" : "https://www.lemonde.fr/rss/en_continu.xml",
-     "language" : "fr"
+     "country" : "fr"
     },
     {"name_organization" : "elpais",
      "rss_link" : "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada",
-     "language" : "es"
+     "country" : "es"
     },
-    {"name_organization" : "leparisien",
+    {"name_organization" : "LeParisien",
      "rss_link" : "https://feeds.leparisien.fr/leparisien/rss/international",
-     "language" : "fr"},
-     {"name_organization" : "new-york times",
+     "country" : "fr"},
+     {"name_organization" : "New-YorkTimes",
       "rss_link" :  "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-      "language" : "en"}
+      "country" : "en"}
   ]

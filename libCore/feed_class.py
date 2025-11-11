@@ -14,7 +14,7 @@ class feed:
             content = json.load(handle)
             tick = 0
             for only_one_content in content:
-                dict_feed = self.utils_.order_dict(only_one_content["rss_link"], only_one_content["language"], dict_feed, tick)
+                dict_feed = self.utils_.order_dict(only_one_content["rss_link"], only_one_content["country"], dict_feed, tick)
                 tick += 1
             return dict_feed                
         else:
